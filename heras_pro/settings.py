@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import mimetypes
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,10 +27,12 @@ SECRET_KEY = 'django-insecure-2d+dfiv+m8q$(b(*9y(&rc^aw#3n=lsi=kyyrcve9qa%qc9g66
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
-
+mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("image/webp", ".webp", True)
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 CORS_ALLOW_ALL_ORIGINS = True  # For development only
 CORS_ALLOW_CREDENTIALS = True
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 # Application definition
 
@@ -122,10 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type
