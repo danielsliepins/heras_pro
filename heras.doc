@@ -1,0 +1,27 @@
+# Use the official Python image as the base image
+FROM python:3.9-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY requirements.txt .
+
+# Install the Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the Django application code into the container
+COPY . .
+
+# Collect the Django static files
+RUN python manage.py collectstatic --no-input
+
+# Set the environment variables
+ENV DJANGO_SETTINGS_MODULE=heras_pro.settings
+ENV DJANGO_ALLOWED_HOSTS=*
+
+# Expose the port that the Django application will run on
+EXPOSE 8000
+
+# Start the Django application
+CMD ["gunicorn", "heras_pro.wsgi:application", "--bind", "0.0.0.0:8000"]
