@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Heras Pro{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="{% url 'sakums' %}" class="logo">
+                    <img src="{% static 'main/images/logo.webp' %}" alt="Heras Pro Logo" class="logo-img">
+                </a>
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'sakums' %}">Sākums</a></li>
+                        <li><a href="{% url 'par_mums' %}">Par Mums</a></li>
+                        <li><a href="{% url 'pakalpojumi' %}">Pakalpojumi</a></li>
+                        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                        <li><a href="{% url 'raksti_mums' %}">Raksti Mums</a></li>
+                        <li><a href="{% url 'atsauksmes' %}">Atsauksmes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main style="margin: 0; padding: 0;">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="{% static 'main/images/logo.webp' %}" alt="Heras Pro Logo" class="footer-logo">
+                    <p>Heras Pro - jūsu uzticamais partneris būvniecībā</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakti</h3>
+                    <p>Tālr.: +371 20000000</p>
+                    <p>E-pasts: info@heraspro.lv</p>
+                    <p>Adrese: Rīga, Latvija</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Seko Mums</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

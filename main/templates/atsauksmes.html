@@ -1,0 +1,77 @@
+<!-- atsauksmes.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Atsauksmes - Heras Pro{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Klientu atsauksmes</h1>
+                <h2 class="hero-subtitle">Ko par mums saka mūsu klienti</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="testimonials-grid">
+        <!-- First Row -->
+        <div class="row mb-5 align-items-center">
+            <!-- First Testimonial -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">HerasPro komanda pārspēja mūsu ekspektācijas. Mēbeles, kuras tika radītas mūsu birojam, ne tikai izskatās izsmalcināti, bet ir arī ārkārtīgi izturīgas. Viņu meistarība un apņemšanās nodrošināt vislabāko kvalitāti ir patiešām iespaidīga.</p>
+                    <div class="testimonial-author">Emma Jensen</div>
+                </div>
+            </div>
+            
+            <!-- Center Image -->
+            <div class="col-md-4">
+                <div class="testimonial-image">
+                    <img src="{% static 'main/images/testimonial1.jpg' %}" alt="Testimonial" class="img-fluid rounded">
+                </div>
+            </div>
+            
+            <!-- Second Testimonial -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Sadarbība ar HerasPro mūsu mājas interjera dizaina veidošanā bija absolūti fantastiska. Viņu komanda pārvērta mūsu idejas par realitāti. Tas bija apbrīnojami. Detalizētā pieeja un radošais spars padarīja mūsu telpu patiešām unikālu. Mēs nevarētu būt laimīgāki par rezultātiem!</p>
+                    <div class="testimonial-author">Sofie Madsen</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-md-4">
+                <div class="testimonial-image">
+                    <img src="{% static 'main/images/testimonial2.jpeg' %}" alt="Testimonial" class="img-fluid rounded">
+                </div>
+            </div>
+            
+            <!-- Third Testimonial -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Mēs uzticējām HerasPro mūsu biroja renovācijas projekta vadību, un viņi izpildīja savu darbu nevainojami. Sākot ar rūpīgo plānošanu un beidzot ar laika menedžmentu. HerasPro komanda nodrošināja, ka projekta plānošana norit raiti un ietilpst mūsu budžetā. Process noritēja bez stresa, un rezultāts bija izcils.</p>
+                    <div class="testimonial-author">Mia Nielsen</div>
+                </div>
+            </div>
+            
+            <!-- Image -->
+            <div class="col-md-4">
+                <div class="testimonial-image">
+                    <img src="{% static 'main/images/testimonial3.jpg' %}" alt="Testimonial" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

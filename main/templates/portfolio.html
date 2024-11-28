@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portfolio - Heras Pro{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Portfolio</h1>
+                <h2 class="hero-subtitle">Mūsu darbi</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid -->
+<div class="container py-5">
+    <div class="portfolio-grid">
+        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#galleryModal1">
+            <img src="{% static 'main/images/DALLE_1.webp' %}" alt="Portfolio 1" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3>Serene Dreams</h3>
+            </div>
+        </div>
+        
+        <div class="portfolio-item large" data-bs-toggle="modal" data-bs-target="#galleryModal2">
+            <img src="{% static 'main/images/DALLE_2.webp' %}" alt="Portfolio 2" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3>Modern Oasis</h3>
+            </div>
+        </div>
+        
+        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#galleryModal3">
+            <img src="{% static 'main/images/DALLE_3.webp' %}" alt="Portfolio 3" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3>Effortless Sophistication</h3>
+            </div>
+        </div>
+        
+        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#galleryModal4">
+            <img src="{% static 'main/images/DALLE_4.webp' %}" alt="Portfolio 4" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3>Elegant Living</h3>
+            </div>
+        </div>
+        
+        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#galleryModal5">
+            <img src="{% static 'main/images/DALLE_5.webp' %}" alt="Portfolio 5" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3>Tranquil Heaven</h3>
+            </div>
+        </div>
+        
+        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#galleryModal6">
+            <img src="{% static 'main/images/DALLE_6.webp' %}" alt="Portfolio 6" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3>Contemporary Charm</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+{% for i in '123456'|make_list %}
+<div class="modal fade" id="galleryModal{{i}}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark">
+            <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times text-white"></i>
+            </button>
+            <div class="modal-body p-0">
+                <div id="carousel{{i}}" class="carousel slide">
+                    <div class="carousel-inner">
+                        {% for j in '123456'|make_list %}
+                        <div class="carousel-item {% if j == i %}active{% endif %}">
+                            <img src="{% static 'main/images/DALLE_'|add:j|add:'.webp' %}" class="d-block w-100" alt="Gallery image">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{i}}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel{{i}}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

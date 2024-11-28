@@ -1,0 +1,74 @@
+<!-- pakalpojumi.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pakalpojumi - Heras Pro{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mūsu pakalpojumi</h1>
+                <h2 class="hero-subtitle">Profesionalitāte katrā solī</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Content -->
+<div class="container py-5">
+    <!-- First Service - Image Right -->
+    <div class="row service-row align-items-center mb-5">
+        <div class="col-md-6">
+            <div class="service-item">
+                <h3>Projektu vadība</h3>
+                <p>HerasPro projektu vadības pakalpojumi piedāvā rūpīgu plānošanu un projektu izpildi. Mēs nodrošinam, ka jūsu interjera projekti tiek nevainojami organizēti, laikus izpildīti un ietilpst tieši jūsu nospraustajā budžetā. Mūsu ekspertu komanda risina katru jūsu projekta aspektu, no koncepta līdz realizācijai, nodrošinot jums iespaidīgu galarezultātu.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'main/images/DALLE_1.webp' %}" alt="Project Management" class="service-image">
+        </div>
+    </div>
+
+    <!-- Second Service - Image Left -->
+    <div class="row service-row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="{% static 'main/images/DALLE_2.webp' %}" alt="Furniture Manufacturing" class="service-image">
+        </div>
+        <div class="col-md-6">
+            <div class="service-item">
+                <h3>Mēbeļu ražošana</h3>
+                <p>HerasPro mēbeļu ražošanas komanda apvieno mākslinieciskumu un precizitāti, lai radītu tādas mēbeles, kas uzlabos jūsu interjera dizainu. Katru projektu mēs veidojam ar rūpību un ar uzsvaru uz detaļām, izmantojot augstas kvalitātes materiālus, lai īstenotu jūsu redzējumu. Mūsu mēbeles nav tikai funkcionālas; tās ir kā izteiksmes līdzeklis jūsu stilam un apliecinājumu mūsu sniegtajai kvalitātei.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Service - Image Right -->
+    <div class="row service-row align-items-center mb-5">
+        <div class="col-md-6">
+            <div class="service-item">
+                <h3>Interjera dizains</h3>
+                <p>HerasPro interjera dizaina pakalpojumi ir radošuma un funkcionalitātes savienojums, pārvēršot telpas pievilcīgā vidē, kas atspoguļo jūsu unikālo stilu un vajadzības. Mūsu pieredzējušo dizaineru komanda uzklausa jūsu redzējumu un pārvērš to realitātē, piedāvājot interjera risinājumus, kas ir ne tikai estētiski pievilcīgi, bet arī pielāgoti tā, lai uzlabotu jūsu ikdienu.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'main/images/DALLE_3.webp' %}" alt="Interior Design" class="service-image">
+        </div>
+    </div>
+
+    <!-- Fourth Service - Image Left -->
+    <div class="row service-row align-items-center">
+        <div class="col-md-6">
+            <img src="{% static 'main/images/DALLE_4.webp' %}" alt="Furniture Installation" class="service-image">
+        </div>
+        <div class="col-md-6">
+            <div class="service-item">
+                <h3>Mēbeļu uzstādīšana</h3>
+                <p>HerasPro mēbeļu uzstādīšanas pakalpojumi ir kā pēdējais pieskāriens, kā "odziņa" uz saldā ēdiena, jūsu interjera projektam. Mūsu kompetentā komanda nodrošina, ka katra mēbele tiek precīzi novietota, salikta un izvietota jūsu telpā, lai radītu nevainojamu interjeta dizainu. Mēs rūpējamies par katru detaļu, atstājot jums pilnīgi aprīkotu un skaisti iekārtotu vidi.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

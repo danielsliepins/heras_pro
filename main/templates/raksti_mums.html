@@ -1,0 +1,76 @@
+<!-- raksti_mums.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Raksti Mums - Heras Pro{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Raksti Mums</h1>
+                <h2 class="hero-subtitle">Mēs priecāsimies atbildēt uz jūsu jautājumiem</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="contact-form-wrapper">
+                <form method="post" class="contact-form">
+                    {% csrf_token %}
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Vārds, Uzvārds *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">E-pasts *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="phone">Tālrunis</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="subject">Tēma *</label>
+                        <select class="form-select" id="subject" name="subject" required>
+                            <option value="">Izvēlieties tēmu</option>
+                            <option value="quotation">Cenu piedāvājums</option>
+                            <option value="project">Projekta konsultācija</option>
+                            <option value="service">Servisa pieteikums</option>
+                            <option value="other">Cits jautājums</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="message">Ziņa *</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="privacy" required>
+                        <label class="form-check-label" for="privacy">
+                            Piekrītu personas datu apstrādei
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sūtīt ziņu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

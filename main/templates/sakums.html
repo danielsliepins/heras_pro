@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jūsu redzējums, mūsu prasmes</h1>
+                <h2 class="hero-subtitle">Mēbeļu ražošana un interjera dizains</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="container py-5">
+    <div class="row align-items-stretch content-section">
+        <div class="col-md-6 p-0">
+            <img src="{% static 'main/images/DALLE_2.webp' %}" alt="Interior Design" class="content-image">
+        </div>
+        <div class="col-md-6 content-text">
+            <h2>Par mums</h2>
+            
+            <div class="feature-text">
+                <p>Esiet sveicināti HerasPro, kur mākslu apvienojam ar inovācijām, lai pārveidotu jūsu biroja un dzīvojamās telpas!</p>
+            </div>
+            
+            <p>Kā viens no vadošajiem uzņēmumiem mēbeļu dizainēšanas, ražošanas un uzstādīšanas pasaulē, mēs lepojamies ar savu spēju iedvesmot un pārveidot jebkuru vidi.</p>
+
+            <p>HerasPro ir ne tikai mēbeļu uzņēmums; mēs esam jūsu partneri, kas rada telpas, kas rezonē ar jūsu stilu un personību. Vai jūs iekārtojat savu sapņu māju, aprīkojat elegantu biroju vai pārveidojat komerciālu vidi, mēs esam šeit, lai jūsu redzējumu padarītu par realitāti.</p>
+
+            <div class="vision-text">
+                <p>Izjūtiet mākslas pieskārienu, tehnoloģisko inovāciju un meistarīgas prasmes sinerģiju ar HerasPro. Ļaujiet mums īstenot jūsu idejas, radot mēbeles, kas kļūs par iecienītiem elementiem jūsu vidē. Ielūkojieties pasaulē, kur mēbeles nav tikai funkcionālas; tās ir jūsu unikālās gaumes un mūsu nepārprotamās izcilības piemērs.</p>
+
+                <p>Laipni lūdzam HerasPro, kur uz katra soļa vari atklāt unikālu ainavu, kur telpas tiek pārdomātas ar māksliniecisku pieskārienu un izcilības spēku.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
